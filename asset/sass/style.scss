@@ -1,0 +1,67 @@
+@import "utlis/reset.scss";
+$primary-color:#9356DC;
+$secondary-color:#FF79DA;
+$tertiary-color:#99E2D0;
+@media screen and (max-width: 980px) {
+    header{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 4em 3em 20em 30em;
+    }
+    #logo{
+        width: 50%;
+        height: 50%;
+        margin: auto;
+    }
+    .lieux{
+        display: flex;
+        margin: auto;
+    }
+    .reservation {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 0 4em;
+        text-align: center;
+
+        .btn{
+            background-color:$secondary-color;
+            height: 2em;
+            border-radius: 40px;
+        }
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        margin: 0 1em;
+    }
+    nav ul{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3,8em);
+        margin: 1em 0;
+        grid-gap: 1em;
+    }
+    .Fonctionnement{
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        position: relative;
+        border-radius: 40px;
+        height: 80%;
+    }
+    .Fonctionnement i{
+        font-size: 2em;
+        margin: 0 1em;
+        color: gray;
+    }
+    .Fonctionnement span{
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        position: absolute;
+        left: -0.4em;
+        font-size: 1.5em;
+        border-radius: 100%;
+        padding: 0.1em;
+    }
+}
