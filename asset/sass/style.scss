@@ -40,7 +40,7 @@ $tertiary-color:#99E2D0;
         grid-template-columns: 100%;
         grid-template-rows: repeat(3,8em);
         margin: 1em 0;
-        grid-gap: 1em;
+        grid-gap: 2em;
     }
     .Fonctionnement{
         display: flex;
@@ -63,5 +63,9 @@ $tertiary-color:#99E2D0;
         font-size: 1.5em;
         border-radius: 100%;
         padding: 0.1em;
+    }
+    div img{
+        width: 80%;
+        height: 80%;
     }
 }
