@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 375px) {
+  footer {
+    background-color: #353535;
+    color: white;
+    padding: 1em;
+  }
+  footer h3 {
+    margin-bottom: 1em;
+  }
+  footer li {
+    margin: 0.5em 0;
+  }
+  footer a {
+    color: white;
+  }
+}
+@media screen and (max-width: 375px) {
+  header {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5em 20em;
+  }
+  header i {
+    float: left;
+  }
+  header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #logo {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    object-fit: unset;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5em repeat(3, 18em) 5em;
+    background-color: #f6f6f6;
+    border-radius: 1em 1em 0 0;
+  }
+  main .btn {
+    background-color: #FF79DA;
+    height: 3em;
+    border-radius: 40px;
+    margin: 2em 7em;
+  }
+
+  .restaurant {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1em;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2em repeat(3, 5em);
+    margin: 0 1em;
+  }
+  .menu h3 {
+    color: gray;
+  }
+  .menu span {
+    float: right;
+  }
+  .menu div {
+    background-color: white;
+    border-radius: 15px;
+    height: 80%;
+    padding: 0.5em;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */
