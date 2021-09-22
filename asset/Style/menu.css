@@ -6,6 +6,34 @@
 }
 
 @media screen and (max-width: 375px) {
+  header {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5em 20em;
+  }
+  header div {
+    display: flex;
+  }
+  header i {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    font-size: larger;
+  }
+  header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #logo {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    object-fit: unset;
+  }
+}
+@media screen and (max-width: 375px) {
   footer {
     background-color: #353535;
     color: white;
@@ -21,14 +49,20 @@
     color: white;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   header {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 5em 20em;
+    grid-template-rows: 4em 15em;
+  }
+  header div {
+    display: flex;
   }
   header i {
-    float: left;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    font-size: larger;
   }
   header img {
     width: 100%;
@@ -38,11 +72,45 @@
 
   #logo {
     width: 50%;
-    height: 50%;
+    height: 80%;
     margin: auto;
     object-fit: unset;
   }
 
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: 3em 15em 3em;
+    grid-template-areas: "a titre d" "entre plat dessert" "g command k";
+    margin: 0 0 0 0.5em;
+  }
+  main :nth-child(1) {
+    grid-area: titre;
+  }
+  main :nth-child(2) {
+    grid-area: entre;
+  }
+  main :nth-child(3) {
+    grid-area: plat;
+  }
+  main :nth-child(4) {
+    grid-area: dessert;
+  }
+  main :nth-child(5) {
+    grid-area: command;
+  }
+  main .restaurant {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  main .restaurant i {
+    position: absolute;
+    right: 0%;
+    top: 10%;
+  }
+}
+@media screen and (max-width: 375px) {
   main {
     display: grid;
     grid-template-columns: 100%;
@@ -71,15 +139,21 @@
   }
   .menu h3 {
     color: gray;
+    width: 10%;
+    border-bottom: 0.2em solid #99E2D0;
   }
   .menu span {
-    float: right;
+    position: absolute;
+    right: 10px;
+    top: 26px;
   }
   .menu div {
     background-color: white;
     border-radius: 15px;
     height: 80%;
     padding: 0.5em;
+    position: relative;
+    margin: 1em 0;
   }
 }
 
