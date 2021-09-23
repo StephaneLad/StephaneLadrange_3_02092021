@@ -1,0 +1,8 @@
+{
+    "schedule": "daily",
+    "ignoredFiles": [
+    ],
+    "aggressiveCompression": "true", 
+    "compressWiki": "true", 
+    "minKBReduced": 500 
+}
