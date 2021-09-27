@@ -99,9 +99,8 @@
   main {
     display: grid;
     grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 3em 15em 3em;
-    grid-template-areas: "a titre d" "entre plat dessert" "g command k";
-    margin: 0 0 0 0.5em;
+    grid-template-rows: 3em 15em;
+    grid-template-areas: "titre titre command" "entre plat dessert";
   }
   main :nth-child(1) {
     grid-area: titre;
@@ -136,6 +135,7 @@
     grid-template-rows: 5em repeat(3, 18em) 5em;
     background-color: #f6f6f6;
     border-radius: 1em 1em 0 0;
+    grid-area: "titre" "entre" "plat" "dessert" "command";
   }
   main .btn {
     background-color: #FF79DA;

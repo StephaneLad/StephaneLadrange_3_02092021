@@ -1,3 +1,90 @@
+@media screen and (max-width: 768px){
+    header{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 6em 4em 15em 10em;
+        grid-template-areas: 
+        "ohmyfood ohmyfood ohmyfood"
+        "lieux lieux lieux"
+        "reservation reservation reservation"
+        "fonction fonction fonction";
+    }
+    #logo{
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        grid-area: ohmyfood;
+    }
+    .lieux{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        background-color: #eaeaea;
+        grid-area: lieux;
+    }
+    .reservation {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: $background;
+        width: 100%;
+        height: 100%;
+        grid-area: reservation;
+        
+        h2{
+            margin: 1em 0;
+            padding: 0 2em;
+        }
+        p{
+            padding: 0 1.4em;
+        }
+
+        .btn{
+            background-color:$secondary-color;
+            height: 3em;
+            border-radius: 40px;
+            margin: 2em 7em;
+        }
+    }
+    nav{
+        grid-area: fonction;
+
+        ul{
+            display: flex;
+            justify-content: space-around;
+            margin: 1em;
+        }
+    }
+    .Fonctionnement{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $background;
+        position: relative;
+        border-radius: 40px;
+        height: 5em;
+        width: 30%;
+        padding: 0.5em;
+        i{
+            font-size: 2em;
+            margin: 0 1em;
+            color: gray;
+        }
+        span{
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+            position: absolute;
+            left: -0.4em;
+            font-size: 1.5em;
+            border-radius: 100%;
+            padding: 0.1em 0.2em 0.1em 0.2em;
+            color: white;
+        }
+    }
+}
 @media screen and (max-width: 375px){
     header{
         display: grid;
