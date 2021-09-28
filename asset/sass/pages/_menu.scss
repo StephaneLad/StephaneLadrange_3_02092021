@@ -1,33 +1,75 @@
-@media screen and (max-width: 768px){
-    header{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 4em 15em;
-        div{
-            display: flex;
-        }
-        i{
-            position: absolute;
-            left: 10px;
-            top: 30px;
-            font-size: larger;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    #logo{
+main{
+    display: grid;
+    grid-template-columns: repeat(3,28%);
+    grid-template-rows: 3em 16em ;
+    grid-template-areas:
+    "titre titre command"
+    "entre plat dessert";
+    grid-gap: 1em;
+    margin: 0.5em 1em;
+    .btn{
+        background-color:$secondary-color;
+        height: 3em;
+        border-radius: 40px;
         width: 50%;
-        height: 80%;
         margin: auto;
-        object-fit:unset;
     }
+        :nth-child(1){
+            grid-area: titre;
+        }
+        :nth-child(2){
+            grid-area: entre;
+        }
+        :nth-child(3){
+            grid-area: plat;
+        }   
+        :nth-child(4){
+            grid-area: dessert;
+        }
+        :nth-child(5){
+            grid-area: command;
+        }
+        .restaurant{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            i{
+                position: absolute;
+                right: 0%;
+                top: 10%;
+            }       
+        }
+}
+.menu{
+    background-color: $background;
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    h3{
+        color: gray;
+        width: 10%;
+        border-bottom: 0.2em solid $tertiary-color;
+    }
+    span{
+        position: absolute;
+        right: 10px;
+        top: 26px;
+    }
+    div{
+        background-color: white;
+        border-radius: 15px;
+        height: auto;
+        padding: 0.5em;
+        position: relative;
+        margin: 0.5em;
+        
+    }
+}
+
+@media screen and (max-width: 768px){
     main{
         display: grid;
         grid-template-columns: repeat(3,33%);
-        grid-template-rows: 3em 15em ;
+        grid-template-rows: 3em 17em ;
         grid-template-areas:
         "titre titre command"
         "entre plat dessert";
@@ -51,13 +93,45 @@
             display: flex;
             justify-content: center;
             position: relative;
-        i{
-            position: absolute;
-            right: 0%;
-            top: 10%;
-        }       
+            i{
+                position: absolute;
+                right: 0%;
+                top: 10%;
+            }       
         }
 
+    }
+    .restaurant{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 1em;
+    }
+}
+.menu{
+    background-color: $background;
+    padding: 0.5em;
+    border-radius: 15px;
+    h2{
+        font-size: 1.1em;
+    }
+    h3{
+        color: gray;
+        width: 10%;
+        border-bottom: 0.2em solid $tertiary-color;
+        margin: 0.2em 0;
+    }
+    span{
+        position: absolute;
+        right: 10px;
+        top: 26px;
+    }
+    div{
+        background-color: white;
+        border-radius: 15px;
+        height: auto;
+        padding: 0.5em;
+        position: relative;
+        margin: 0.2em 0 ;
     }
 }
 
@@ -69,7 +143,7 @@
         grid-template-rows: 5em repeat(3,18em) 5em;
         background-color: $background;
         border-radius: 1em 1em 0 0;
-        grid-area: 
+        grid-template-areas: 
         "titre"
         "entre"
         "plat"
