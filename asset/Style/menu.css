@@ -150,9 +150,11 @@ main {
   margin: 0.5em 1em;
 }
 main .btn {
-  background-color: #FF79DA;
-  height: 3em;
+  background: #ff79da;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   border-radius: 40px;
+  border: 0px;
+  height: 3em;
   width: 50%;
   margin: auto;
 }
@@ -212,6 +214,8 @@ main .restaurant i {
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: 3em 17em;
     grid-template-areas: "titre titre command" "entre plat dessert";
+    grid-gap: 0.5em;
+    margin: 0.5em;
   }
   main :nth-child(1) {
     grid-area: titre;
@@ -283,9 +287,11 @@ main .restaurant i {
     grid-template-areas: "titre" "entre" "plat" "dessert" "command";
   }
   main .btn {
-    background-color: #FF79DA;
-    height: 3em;
+    background: #ff79da;
+    background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
     border-radius: 40px;
+    border: 0px;
+    height: 3em;
     margin: 2em 7em;
   }
 

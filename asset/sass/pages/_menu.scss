@@ -8,9 +8,8 @@ main{
     grid-gap: 1em;
     margin: 0.5em 1em;
     .btn{
-        background-color:$secondary-color;
+        @include button;
         height: 3em;
-        border-radius: 40px;
         width: 50%;
         margin: auto;
     }
@@ -73,6 +72,8 @@ main{
         grid-template-areas:
         "titre titre command"
         "entre plat dessert";
+        grid-gap: 0.5em;
+        margin: 0.5em;
         
         :nth-child(1){
             grid-area: titre;
@@ -150,10 +151,10 @@ main{
         "dessert"
         "command";
         
+        
         .btn{
-            background-color:$secondary-color;
+            @include button;
             height: 3em;
-            border-radius: 40px;
             margin: 2em 7em;
         }
     }
