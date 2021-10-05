@@ -1,18 +1,19 @@
-main{
-    display: grid;
-    grid-template-columns: repeat(3,28%);
-    grid-template-rows: 3em 16em ;
-    grid-template-areas:
-    "titre titre command"
-    "entre plat dessert";
-    grid-gap: 1em;
-    margin: 0.5em 1em;
-    .btn{
-        @include button;
-        height: 3em;
-        width: 50%;
-        margin: auto;
-    }
+@media screen and (min-width: 769px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(3,28%);
+        grid-template-rows: 15em 16em ;
+        grid-template-areas:
+        "titre titre command"
+        "entre plat dessert";
+        grid-gap: 1em;
+        margin: 0.5em 1em;
+        .btn{
+            @include button;
+            height: 3em;
+            width: 50%;
+            margin: auto;
+        }
         :nth-child(1){
             grid-area: titre;
         }
@@ -28,43 +29,61 @@ main{
         :nth-child(5){
             grid-area: command;
         }
-        .restaurant{
-            display: flex;
-            justify-content: center;
-            position: relative;
-            i{
-                position: absolute;
-                right: 0%;
-                top: 10%;
-            }       
-        }
-}
-.menu{
-    background-color: $background;
-    padding: 0.5em 1em;
-    border-radius: 15px;
-    h3{
-        color: gray;
-        width: 10%;
-        border-bottom: 0.2em solid $tertiary-color;
     }
-    span{
-        position: absolute;
-        right: 10px;
-        top: 26px;
-    }
-    div{
-        background-color: white;
-        border-radius: 15px;
-        height: auto;
-        padding: 0.5em;
+    .restaurant{
+        display: flex;
+        justify-content: center;
         position: relative;
-        margin: 0.5em;
-        
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+        h1{
+            position: absolute;
+            bottom: 0;
+        }
+        i{
+            position: absolute;
+            right: 0%;
+            top: 10%;
+        }       
+    }
+    .menu{
+        background-color: $background;
+        padding: 0.5em 1em;
+        border-radius: 15px;
+        h3{
+            color: gray;
+            width: 10%;
+            border-bottom: 0.2em solid $tertiary-color;
+        }
+        span{
+            position: absolute;
+            right: 10px;
+            top: 26px;
+        }
+        div{
+            background-color: white;
+            border-radius: 15px;
+            height: auto;
+            padding: 0.5em;
+            position: relative;
+            margin: 0.5em;
+            
+        }
+    }
+    
+    .entre{
+        animation: progresive_menu 1.5s ease-in-out 0.5s;
+    }
+    .plat{
+        animation: progresive_menu 2s ease-in-out 0.5s;
+    }
+    .dessert{
+        animation: progresive_menu 2.5s ease-in-out 0.5s;
     }
 }
-
-@media screen and (max-width: 768px){
+@media screen and (min-width: 376px) and (max-width: 768px){
     main{
         display: grid;
         grid-template-columns: repeat(3,33%);
@@ -74,7 +93,16 @@ main{
         "entre plat dessert";
         grid-gap: 0.5em;
         margin: 0.5em;
-        
+        .restaurant{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            i{
+                position: absolute;
+                right: 0%;
+                top: 10%;
+            }       
+        }
         :nth-child(1){
             grid-area: titre;
         }
@@ -90,16 +118,6 @@ main{
         :nth-child(5){
             grid-area: command;
         }
-        .restaurant{
-            display: flex;
-            justify-content: center;
-            position: relative;
-            i{
-                position: absolute;
-                right: 0%;
-                top: 10%;
-            }       
-        }
 
     }
     .restaurant{
@@ -107,41 +125,52 @@ main{
         justify-content: space-between;
         margin: 0 1em;
     }
-}
-.menu{
-    background-color: $background;
-    padding: 0.5em;
-    border-radius: 15px;
-    h2{
-        font-size: 1.1em;
-    }
-    h3{
-        color: gray;
-        width: 10%;
-        border-bottom: 0.2em solid $tertiary-color;
-        margin: 0.2em 0;
-    }
-    span{
-        position: absolute;
-        right: 10px;
-        top: 26px;
-    }
-    div{
-        background-color: white;
-        border-radius: 15px;
-        height: auto;
+    .menu{
+        background-color: $background;
         padding: 0.5em;
-        position: relative;
-        margin: 0.2em 0 ;
+        border-radius: 15px;
+        h2{
+            font-size: 1.1em;
+        }
+        h3{
+            color: gray;
+            width: 10%;
+            border-bottom: 0.2em solid $tertiary-color;
+            margin: 0.2em 0;
+        }
+        span{
+            position: absolute;
+            right: 10px;
+            top: 26px;
+        }
+        div{
+            background-color: white;
+            border-radius: 15px;
+            height: auto;
+            padding: 0.5em;
+            position: relative;
+            margin: 0.2em 0 ;
+        }
     }
+    .entre{
+        animation: progresive_menu 1.5s ease-in-out 0.5s;
+    }
+    .plat{
+        animation: progresive_menu 2s ease-in-out 0.5s;
+    }
+    .dessert{
+        animation: progresive_menu 2.5s ease-in-out 0.5s;
+    }
+
 }
 
-@media screen and (max-width: 375px) {
+
+@media screen and (max-width: 375px){
 
     main{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 5em repeat(3,18em) 5em;
+        grid-template-rows: 20em repeat(3,18em) 5em;
         background-color: $background;
         border-radius: 1em 1em 0 0;
         grid-template-areas: 
@@ -161,7 +190,25 @@ main{
     .restaurant{
         display: flex;
         justify-content: space-between;
-        margin: 0 1em;
+        position: relative; 
+        img{
+            width: 100%;
+        }
+        h1{
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            background-color: $background;
+            width: 100%;
+            padding: 0.2em 0.5em;
+            border-radius: 25px 25px 0 0;
+        }
+        i{
+            position: absolute;
+            bottom: 15px;
+            right: 25px;
+            z-index: 2;
+        }
     }
     .menu{
         display: grid;
@@ -186,6 +233,15 @@ main{
             position: relative;
             margin: 1em 0;
         }
+    }
+    .entre{
+        animation: progresive_menu 1.5s ease-in-out 0.5s;
+    }
+    .plat{
+        animation: progresive_menu 2s ease-in-out 0.5s;
+    }
+    .dessert{
+        animation: progresive_menu 2.5s ease-in-out 0.5s;
     }
 
 }

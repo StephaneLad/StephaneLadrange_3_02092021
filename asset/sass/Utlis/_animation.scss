@@ -1,0 +1,58 @@
+@keyframes progresive_menu {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+@keyframes chargement {
+    0%{
+        opacity: 100%;
+    }
+    20%{
+        opacity: 20%;
+    }
+    40%{
+        opacity: 100%;
+        color: $secondary-color;
+    }
+    60%{
+        opacity: 20%;
+    }
+    80%{
+        opacity: 100%;
+        color: $primary-color;
+    }
+    100%{
+        opacity: 20%;
+    }
+}
+@keyframes chargement_text {
+    0%{
+        color: $primary-color;
+    }
+    20%{
+        color: $secondary-color;
+    }
+    40%{
+        color: $primary-color;
+    }
+    60%{
+        color: $secondary-color;
+    }
+    80%{
+        color: $primary-color;
+    }
+    100%{
+        color: $secondary-color;
+    }
+}
+@keyframes fond {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}

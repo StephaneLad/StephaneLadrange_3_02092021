@@ -1,9 +1,25 @@
-@import "../reset.scss";
-@import "../Utlis/variable";
-@import "../Composants/button";
-@import "../Layout/header-accueil";
-@import "../Layout/footer";
-
+.load{
+    position: absolute;
+    z-index: 2;
+    background-color: $background;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20em;
+    animation: fond 0.5s 3s forwards;
+    flex-direction: column;
+    i{
+        color: $primary-color;
+        animation: chargement 3.5s ease-in-out;
+    }
+    p{
+        margin: 1em 2em;
+        font-size:30px;
+        animation: chargement_text 3.5s ease-in-out forwards;
+    }
+}
 a,a:visited{
     text-decoration: none;
 }
@@ -40,7 +56,8 @@ main{
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 25px ;
+        border-radius: 25px 25px 26px 26px ;
+        box-shadow: 1px 1px 10px black;
     }
 }
 #note-enchante{
@@ -60,11 +77,12 @@ main{
     border-radius: 0 0 25px 25px;
     padding: 0.2em 1em;
 
-    i{
+    button{
         float: right;
         position: absolute;
         top: 14px;
         right: 20px;
+        border: none;
     }
 }
 .new{
@@ -76,6 +94,28 @@ main{
 }
 
 @media screen and (max-width: 768px){
+    .load{
+        position: absolute;
+        z-index: 2;
+        background-color: $background;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20em;
+        animation: fond 0.5s 3s forwards;
+        flex-direction: column;
+        i{
+            color: $primary-color;
+            animation: chargement 3.5s ease-in-out;
+        }
+        p{
+            margin: 1em 2em;
+            font-size:30px;
+            animation: chargement_text 3.5s ease-in-out forwards;
+        }
+    }
     main{
         height: 100%;
         width: 100%;
@@ -131,6 +171,28 @@ main{
     }
 }
 @media screen and (max-width: 375px) {
+    .load{
+        position: absolute;
+        z-index: 2;
+        background-color: $background;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20em;
+        animation: fond 0.5s 3s forwards;
+        flex-direction: column;
+        i{
+            color: $primary-color;
+            animation: chargement 3.5s ease-in-out;
+        }
+        p{
+            margin: 1em 2em;
+            font-size:30px;
+            animation: chargement_text 3.5s ease-in-out forwards;
+        }
+    }
     main{
         height: 100%;
         width: 100%;

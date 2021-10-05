@@ -13,6 +13,10 @@ footer{
     a{
         color: white;
     }
+    
+}
+.menu_footer{
+    bottom: 0;
 }
 @media screen and (max-width: 768px){
     footer{
@@ -46,5 +50,8 @@ footer{
         a{
             color: white;
         }
+    }
+    .menu_footer{
+        bottom: auto;
     }
 }
