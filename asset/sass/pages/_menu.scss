@@ -57,10 +57,39 @@
             width: 10%;
             border-bottom: 0.2em solid $tertiary-color;
         }
-        span{
+        .prix{
             position: absolute;
             right: 10px;
             top: 26px;
+        }
+        p{
+            overflow: hidden;
+        }
+        .fond{
+            position: absolute;
+            opacity: 0%;
+            top: 0;
+            right: 0px;
+            padding: 1.2em 1em;
+            background-color: $tertiary-color;
+            height: 100%;
+        }
+        i{
+            color: white;
+            font-size: 1.5em;
+        }
+        a{
+            &:hover{
+                .fond{
+                    animation: validé_fond 2s ease-in-out forwards;
+                }
+                i{
+                    animation: validé 2s ease-in-out forwards;
+                }
+                .prix{
+                    animation: prix 2s ease-in-out forwards;
+                }
+            }
         }
         div{
             background-color: white;
@@ -69,7 +98,7 @@
             padding: 0.5em;
             position: relative;
             margin: 0.5em;
-            
+            overflow: hidden;
         }
     }
     
@@ -219,11 +248,18 @@
             color: gray;
             width: 10%;
             border-bottom: 0.2em solid $tertiary-color;
+            font-size: 1em;
         }
-        span{
+        h2{
+            font-size: 1.4em;
+            text-overflow: ellipsis;
+        }
+        .prix{
             position: absolute;
             right: 10px;
-            top: 26px;
+            top: 0;
+            height: 100%;
+            padding: 1.2em 0;
         }
         div{
             background-color: white;
@@ -232,6 +268,36 @@
             padding: 0.5em;
             position: relative;
             margin: 1em 0;
+            overflow: hidden;
+        }
+        p{
+            text-overflow: ellipsis;
+        }
+        .fond{
+            position: absolute;
+            opacity: 0%;
+            top: 0;
+            right: 0px;
+            padding: 1.2em 1em;
+            background-color: $tertiary-color;
+            height: 100%;
+        }
+        i{
+            color: white;
+            font-size: 1.5em;
+        }
+        a{
+            &:hover{
+                .fond{
+                    animation: validé_fond 2s ease-in-out forwards;
+                }
+                i{
+                    animation: validé 2s ease-in-out forwards;
+                }
+                .prix{
+                    animation: prix 2s ease-in-out forwards;
+                }
+            }
         }
     }
     .entre{

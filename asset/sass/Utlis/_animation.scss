@@ -56,3 +56,29 @@
         opacity: 0%;
     }
 }
+@keyframes validé {
+    0%{
+        transform: translate(50px,0) rotate(0deg);
+    }
+    100%{
+        transform: translate(0px,0) rotate(360deg);
+        opacity: 100%;
+    }
+}
+@keyframes validé_fond {
+    0%{
+        transform: translate(50px,0);
+    }
+    100%{
+        transform: translate(0px,0);
+        opacity: 100%;
+    }
+}
+@keyframes prix {
+    0%{
+        transform: translate(0px,0);
+    }
+    100%{
+        transform: translate(-50px,0);
+    }
+}

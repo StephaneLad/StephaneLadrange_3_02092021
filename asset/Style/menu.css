@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,82 @@
     opacity: 100%;
   }
 }
-@keyframes chargement {}
+@keyframes chargement {
+  0% {
+    opacity: 100%;
+  }
+  20% {
+    opacity: 20%;
+  }
+  40% {
+    opacity: 100%;
+    color: #FF79DA;
+  }
+  60% {
+    opacity: 20%;
+  }
+  80% {
+    opacity: 100%;
+    color: #9356DC;
+  }
+  100% {
+    opacity: 20%;
+  }
+}
+@keyframes chargement_text {
+  0% {
+    color: #9356DC;
+  }
+  20% {
+    color: #FF79DA;
+  }
+  40% {
+    color: #9356DC;
+  }
+  60% {
+    color: #FF79DA;
+  }
+  80% {
+    color: #9356DC;
+  }
+  100% {
+    color: #FF79DA;
+  }
+}
+@keyframes fond {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+@keyframes validé {
+  0% {
+    transform: translate(50px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, 0) rotate(360deg);
+    opacity: 100%;
+  }
+}
+@keyframes validé_fond {
+  0% {
+    transform: translate(50px, 0);
+  }
+  100% {
+    transform: translate(0px, 0);
+    opacity: 100%;
+  }
+}
+@keyframes prix {
+  0% {
+    transform: translate(0px, 0);
+  }
+  100% {
+    transform: translate(-50px, 0);
+  }
+}
 header {
   display: grid;
   grid-template-columns: 100%;
@@ -219,10 +295,35 @@ footer a {
     width: 10%;
     border-bottom: 0.2em solid #99E2D0;
   }
-  .menu span {
+  .menu .prix {
     position: absolute;
     right: 10px;
     top: 26px;
+  }
+  .menu p {
+    overflow: hidden;
+  }
+  .menu .fond {
+    position: absolute;
+    opacity: 0%;
+    top: 0;
+    right: 0px;
+    padding: 1.2em 1em;
+    background-color: #99E2D0;
+    height: 100%;
+  }
+  .menu i {
+    color: white;
+    font-size: 1.5em;
+  }
+  .menu a:hover .fond {
+    animation: validé_fond 2s ease-in-out forwards;
+  }
+  .menu a:hover i {
+    animation: validé 2s ease-in-out forwards;
+  }
+  .menu a:hover .prix {
+    animation: prix 2s ease-in-out forwards;
   }
   .menu div {
     background-color: white;
@@ -231,6 +332,7 @@ footer a {
     padding: 0.5em;
     position: relative;
     margin: 0.5em;
+    overflow: hidden;
   }
 
   .entre {
@@ -378,11 +480,18 @@ footer a {
     color: gray;
     width: 10%;
     border-bottom: 0.2em solid #99E2D0;
+    font-size: 1em;
   }
-  .menu span {
+  .menu h2 {
+    font-size: 1.4em;
+    text-overflow: ellipsis;
+  }
+  .menu .prix {
     position: absolute;
     right: 10px;
-    top: 26px;
+    top: 0;
+    height: 100%;
+    padding: 1.2em 0;
   }
   .menu div {
     background-color: white;
@@ -391,6 +500,32 @@ footer a {
     padding: 0.5em;
     position: relative;
     margin: 1em 0;
+    overflow: hidden;
+  }
+  .menu p {
+    text-overflow: ellipsis;
+  }
+  .menu .fond {
+    position: absolute;
+    opacity: 0%;
+    top: 0;
+    right: 0px;
+    padding: 1.2em 1em;
+    background-color: #99E2D0;
+    height: 100%;
+  }
+  .menu i {
+    color: white;
+    font-size: 1.5em;
+  }
+  .menu a:hover .fond {
+    animation: validé_fond 2s ease-in-out forwards;
+  }
+  .menu a:hover i {
+    animation: validé 2s ease-in-out forwards;
+  }
+  .menu a:hover .prix {
+    animation: prix 2s ease-in-out forwards;
   }
 
   .entre {
