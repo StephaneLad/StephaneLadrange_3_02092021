@@ -1,6 +1,28 @@
 @mixin button {
-    background: rgb(255,121,218);
-    background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    background: $secondary-color;
+    background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
     border-radius: 40px;
     border: 0px;
+    box-shadow: 4px 4px 10px $primary-color;    
+    cursor: pointer;
+    &:hover{
+        filter: brightness(120%);
+        box-shadow: 8px 6px 20px $primary-color;
+    }
+}
+@mixin heart-btn {
+    cursor: pointer;
+    border: 0px;
+    background-color: white;
+    span{
+        opacity: 0%;
+        color: $secondary-color;
+        position: absolute;
+        left: 0;
+    }
+    &:hover{
+        span{
+            animation: progressive-opacity 1s ease-in-out forwards;
+        }
+    }
 }

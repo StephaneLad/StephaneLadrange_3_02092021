@@ -1,18 +1,23 @@
 @media screen and (min-width: 769px){
     main{
         display: grid;
-        grid-template-columns: repeat(3,28%);
-        grid-template-rows: 15em 16em ;
+        grid-template-columns: repeat(3,33%);
+        grid-template-rows: 17em 4em 16em ;
         grid-template-areas:
-        "titre titre command"
+        "titre titre titre"
+        "z command y"
         "entre plat dessert";
         grid-gap: 1em;
-        margin: 0.5em 1em;
+        margin: 0.5em 2em;
         .btn{
             @include button;
             height: 3em;
             width: 50%;
             margin: auto;
+            cursor: pointer;
+            &:hover{
+                @include button-hover;
+            }
         }
         :nth-child(1){
             grid-area: titre;
@@ -40,13 +45,19 @@
         }
         h1{
             position: absolute;
+            background-color: white;
             bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 0.1em 0;
         }
-        i{
+        .heart-btn{
+            @include heart-btn;
             position: absolute;
-            right: 0%;
-            top: 10%;
-        }       
+            right: 40%;
+            bottom: 2%;
+            font-size: 1.4em;
+        }
     }
     .menu{
         background-color: $background;
@@ -81,13 +92,13 @@
         a{
             &:hover{
                 .fond{
-                    animation: validé_fond 2s ease-in-out forwards;
+                    animation: validé_fond 1s ease-in-out forwards;
                 }
                 i{
-                    animation: validé 2s ease-in-out forwards;
+                    animation: validé 0.5s 0.5s ease-in-out forwards;
                 }
                 .prix{
-                    animation: prix 2s ease-in-out forwards;
+                    animation: prix 1s ease-in-out forwards;
                 }
             }
         }
@@ -103,13 +114,16 @@
     }
     
     .entre{
-        animation: progresive_menu 1.5s ease-in-out 0.5s;
+        opacity: 0%;
+        animation: progressive-opacity 1.5s ease-in-out 0.5s forwards;
     }
     .plat{
-        animation: progresive_menu 2s ease-in-out 0.5s;
+        opacity: 0%;
+        animation: progressive-opacity 2s ease-in-out 0.5s forwards;
     }
     .dessert{
-        animation: progresive_menu 2.5s ease-in-out 0.5s;
+        opacity: 0%;
+        animation: progressive-opacity 2.5s ease-in-out 0.5s forwards;
     }
 }
 @media screen and (min-width: 376px) and (max-width: 768px){
