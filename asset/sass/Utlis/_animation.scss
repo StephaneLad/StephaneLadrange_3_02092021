@@ -105,6 +105,9 @@
     0%{
         transform: translate(50px,0) rotate(0deg);
     }
+    50%{
+        transform: translate(50px,0) rotate(0deg);
+    }
     100%{
         transform: translate(0px,0) rotate(360deg);
         opacity: 100%;

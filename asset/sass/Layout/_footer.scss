@@ -15,6 +15,9 @@ footer{
     }
     
 }
+.footer-note{
+    bottom: auto;
+}
 .menu_footer{
     position: absolute;
 }
@@ -34,6 +37,9 @@ footer{
         a{
             color: white;
         }
+    }
+    .footer-note{
+        bottom: 0;
     }
 }
 @media screen and (max-width: 375px){

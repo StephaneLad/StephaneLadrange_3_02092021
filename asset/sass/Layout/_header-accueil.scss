@@ -1,4 +1,4 @@
-header{
+.header-principal{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 6em 4em 12em 10em;
@@ -8,7 +8,7 @@ header{
     "reservation reservation reservation"
     "fonction fonction fonction";
 }
-#logo{
+#logo-accueil{
     width: 20%;
     height: 100%;
     margin: auto;
@@ -88,7 +88,7 @@ nav{
     }
 }
 @media screen and (max-width: 768px){
-    header{
+    .header-principal{
         display: grid;
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: 6em 4em 15em 10em;
@@ -98,7 +98,7 @@ nav{
         "reservation reservation reservation"
         "fonction fonction fonction";
     }
-    #logo{
+    #logo-accueil{
         width: 50%;
         height: 50%;
         margin: auto;
@@ -178,7 +178,7 @@ nav{
     }
 }
 @media screen and (max-width: 375px){
-    header{
+    .header-principal{
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 4em 3em 15em 30em;
@@ -188,7 +188,7 @@ nav{
         "reservation"
         "fonction";
     }
-    #logo{
+    #logo-accueil{
         width: 50%;
         height: 50%;
         margin: auto;
