@@ -7,11 +7,11 @@
   list-style-type: none;
 }
 
-p {
+p, h2, h3 {
   font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3 {
+h1 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -229,294 +229,21 @@ h1, h2, h3 {
     object-fit: unset;
   }
 }
-.header-principal {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 6em 4em 12em 10em;
-  grid-template-areas: "ohmyfood ohmyfood ohmyfood" "lieux lieux lieux" "reservation reservation reservation" "fonction fonction fonction";
-}
-
 #logo-accueil {
-  width: 20%;
-  height: 100%;
-  margin: auto;
-  grid-area: ohmyfood;
-}
-
-.lieux {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  background-color: #eaeaea;
-  grid-area: lieux;
-  font-size: large;
-}
-
-.reservation {
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  background-color: #f6f6f6;
-  width: 100%;
-  height: 100%;
-  grid-area: reservation;
-  font-size: large;
-}
-.reservation h2 {
-  margin: 1em 0;
-  padding: 0 2em;
-}
-.reservation p {
-  padding: 0 1.4em;
-}
-.reservation .btn {
-  background: #FF79DA;
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-  border-radius: 40px;
-  border: 0px;
-  box-shadow: 4px 4px 10px #9356DC;
-  cursor: pointer;
-  height: 2em;
-  margin: auto;
-  width: 20%;
-  font-size: large;
-}
-.reservation .btn:hover {
-  filter: brightness(120%);
-  box-shadow: 8px 6px 20px #9356DC;
-}
-
-nav {
-  grid-area: fonction;
-}
-nav ul {
-  display: flex;
-  justify-content: space-around;
-  margin: 1em;
-}
-
-.Fonctionnement {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f6f6f6;
-  position: relative;
-  border-radius: 40px;
-  height: 5em;
-  width: 30%;
-  padding: 0.5em;
-}
-.Fonctionnement i {
-  font-size: 2em;
-  margin: 0 1em;
-  color: gray;
-}
-.Fonctionnement span {
-  border: 1px solid #9356DC;
-  background-color: #9356DC;
-  position: absolute;
-  left: -0.4em;
-  top: 1em;
-  font-size: 1.5em;
-  border-radius: 100%;
-  padding: 0.1em 0.2em 0.1em 0.2em;
-  color: white;
+  font-size: 2.5em;
 }
 
 @media screen and (max-width: 768px) {
-  .header-principal {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 6em 4em 15em 10em;
-    grid-template-areas: "ohmyfood ohmyfood ohmyfood" "lieux lieux lieux" "reservation reservation reservation" "fonction fonction fonction";
-  }
-
   #logo-accueil {
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    grid-area: ohmyfood;
-  }
-
-  .lieux {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    background-color: #eaeaea;
-    grid-area: lieux;
-    font-size: medium;
-  }
-
-  .reservation {
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    background-color: #f6f6f6;
-    width: 100%;
-    height: 100%;
-    grid-area: reservation;
-    font-size: medium;
-  }
-  .reservation h2 {
-    margin: 1em 0;
-    padding: 0 2em;
-  }
-  .reservation p {
-    padding: 0 1.4em;
-  }
-  .reservation .btn {
-    background: #FF79DA;
-    background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-    border-radius: 40px;
-    border: 0px;
-    box-shadow: 4px 4px 10px #9356DC;
-    cursor: pointer;
-    height: 3em;
-    margin: 2em 7em;
-    font-size: medium;
-    width: auto;
-  }
-  .reservation .btn:hover {
-    filter: brightness(120%);
-    box-shadow: 8px 6px 20px #9356DC;
-  }
-
-  nav {
-    grid-area: fonction;
-  }
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-    margin: 1em;
-  }
-
-  .Fonctionnement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f6f6f6;
-    position: relative;
-    border-radius: 40px;
-    height: 5em;
-    width: 30%;
-    padding: 0.5em;
-  }
-  .Fonctionnement i {
-    font-size: 2em;
-    margin: 0 1em;
-    color: gray;
-  }
-  .Fonctionnement span {
-    border: 1px solid #9356DC;
-    background-color: #9356DC;
-    position: absolute;
-    left: -0.4em;
-    font-size: 1.5em;
-    border-radius: 100%;
-    padding: 0.1em 0.2em 0.1em 0.2em;
-    color: white;
+    font-size: 2.5em;
   }
 }
 @media screen and (max-width: 375px) {
-  .header-principal {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 4em 3em 15em 30em;
-    grid-template-areas: "ohmyfood" "lieux" "reservation" "fonction";
-  }
-
   #logo-accueil {
-    width: 50%;
-    height: 50%;
-    margin: auto;
-  }
-
-  .lieux {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    background-color: #eaeaea;
-  }
-
-  .reservation {
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    background-color: #f6f6f6;
-    width: 100%;
-    height: 100%;
-  }
-  .reservation h2 {
-    margin: 1em 0;
-    padding: 0 2em;
-  }
-  .reservation p {
-    padding: 0 1.4em;
-  }
-  .reservation .btn {
-    background: #FF79DA;
-    background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-    border-radius: 40px;
-    border: 0px;
-    box-shadow: 4px 4px 10px #9356DC;
-    cursor: pointer;
-    height: 3em;
-    margin: 2em 7em;
-    width: auto;
-  }
-  .reservation .btn:hover {
-    filter: brightness(120%);
-    box-shadow: 8px 6px 20px #9356DC;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    margin: 1em 1em;
-  }
-  nav ul {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 7em);
-    margin: 1em 0;
-    grid-gap: 1em;
-  }
-
-  .Fonctionnement {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    background-color: #f6f6f6;
-    position: relative;
-    border-radius: 40px;
-    height: 100%;
-    width: auto;
-    padding: 0;
-  }
-  .Fonctionnement i {
-    font-size: 2em;
-    margin: 0 1em;
-    color: gray;
-  }
-  .Fonctionnement span {
-    border: 1px solid #9356DC;
-    background-color: #9356DC;
-    position: absolute;
-    left: -0.4em;
-    top: 1.5em;
-    font-size: 1.5em;
-    border-radius: 100%;
-    padding: 0.1em 0.2em 0.1em 0.2em;
-    color: white;
+    font-size: 2.5em;
   }
 }
 footer {
@@ -851,6 +578,8 @@ footer a {
   }
   .menu p {
     text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
   }
   .menu .fond {
     position: absolute;
@@ -968,6 +697,7 @@ footer a {
   .menu h2 {
     font-size: 1.4em;
     text-overflow: ellipsis;
+    width: 100%;
   }
   .menu .prix {
     position: absolute;
@@ -987,6 +717,7 @@ footer a {
   }
   .menu p {
     text-overflow: ellipsis;
+    width: 100%;
   }
   .menu .fond {
     position: absolute;
@@ -1052,6 +783,89 @@ footer a {
 
 a, a:visited {
   text-decoration: none;
+}
+
+.description-restaurant {
+  display: grid;
+  grid-template-rows: 3em 15em 10em;
+}
+
+.lieux {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: #eaeaea;
+  font-size: large;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 100%;
+  font-size: large;
+}
+.reservation h2 {
+  margin: 1em 0;
+  padding: 0 2em;
+}
+.reservation p {
+  padding: 0 1.4em;
+}
+.reservation .btn {
+  background: #FF79DA;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  border-radius: 40px;
+  border: 0px;
+  box-shadow: 4px 4px 10px #9356DC;
+  cursor: pointer;
+  height: 2em;
+  margin: auto;
+  width: 20%;
+  font-size: large;
+}
+.reservation .btn:hover {
+  filter: brightness(120%);
+  box-shadow: 8px 6px 20px #9356DC;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em;
+}
+
+.Fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  position: relative;
+  border-radius: 40px;
+  height: 5em;
+  width: 30%;
+  padding: 0.5em;
+}
+.Fonctionnement i {
+  font-size: 2em;
+  margin: 0 1em;
+  color: gray;
+}
+.Fonctionnement span {
+  border: 1px solid #9356DC;
+  background-color: #9356DC;
+  position: absolute;
+  left: -0.4em;
+  top: 1em;
+  font-size: 1.5em;
+  border-radius: 50%;
+  padding: 0.1em 0.2em 0.1em 0.2em;
+  color: white;
 }
 
 .main-accueil {
@@ -1159,6 +973,82 @@ a, a:visited {
     animation: chargement_text 3.5s ease-in-out forwards;
   }
 
+  .lieux {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #eaeaea;
+    font-size: medium;
+  }
+
+  .reservation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 100%;
+    font-size: medium;
+  }
+  .reservation h2 {
+    margin: 1em 0;
+    padding: 0 2em;
+  }
+  .reservation p {
+    padding: 0 1.4em;
+  }
+  .reservation .btn {
+    background: #FF79DA;
+    background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+    border-radius: 40px;
+    border: 0px;
+    box-shadow: 4px 4px 10px #9356DC;
+    cursor: pointer;
+    height: 3em;
+    margin: 2em 7em;
+    font-size: medium;
+    width: auto;
+  }
+  .reservation .btn:hover {
+    filter: brightness(120%);
+    box-shadow: 8px 6px 20px #9356DC;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 1em;
+  }
+
+  .Fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f6f6;
+    position: relative;
+    border-radius: 40px;
+    height: 5em;
+    width: 30%;
+    padding: 0.5em;
+  }
+  .Fonctionnement i {
+    font-size: 2em;
+    margin: 0 1em;
+    color: gray;
+  }
+  .Fonctionnement span {
+    border: 1px solid #9356DC;
+    background-color: #9356DC;
+    position: absolute;
+    left: -0.4em;
+    font-size: 1.5em;
+    padding: 0.1em 0.2em 0.1em 0.2em;
+    color: white;
+  }
+
   .main-accueil {
     height: 100%;
     width: 100%;
@@ -1227,6 +1117,92 @@ a, a:visited {
     margin: 1em 2em;
     font-size: 30px;
     animation: chargement_text 3.5s ease-in-out forwards;
+  }
+
+  .description-restaurant {
+    display: grid;
+    grid-template-rows: 3em 15em 30em;
+  }
+
+  .lieux {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: #eaeaea;
+  }
+
+  .reservation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 100%;
+  }
+  .reservation h2 {
+    margin: 1em 0;
+    padding: 0 2em;
+  }
+  .reservation p {
+    padding: 0 1.4em;
+  }
+  .reservation .btn {
+    background: #FF79DA;
+    background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+    border-radius: 40px;
+    border: 0px;
+    box-shadow: 4px 4px 10px #9356DC;
+    cursor: pointer;
+    height: 3em;
+    margin: 2em 7em;
+    width: auto;
+  }
+  .reservation .btn:hover {
+    filter: brightness(120%);
+    box-shadow: 8px 6px 20px #9356DC;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 1em;
+  }
+  nav ul {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 7em);
+    margin: 1em 0;
+    grid-gap: 1em;
+  }
+
+  .Fonctionnement {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f6f6f6;
+    position: relative;
+    border-radius: 40px;
+    height: 100%;
+    width: auto;
+    padding: 0;
+  }
+  .Fonctionnement i {
+    font-size: 2em;
+    margin: 0 1em;
+    color: gray;
+  }
+  .Fonctionnement span {
+    border: 1px solid #9356DC;
+    background-color: #9356DC;
+    position: absolute;
+    left: -0.4em;
+    top: 1.5em;
+    font-size: 1.5em;
+    padding: 0.1em 0.2em 0.1em 0.2em;
+    color: white;
   }
 
   .main-accueil {

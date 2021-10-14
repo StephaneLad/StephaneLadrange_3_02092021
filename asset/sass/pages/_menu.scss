@@ -227,6 +227,8 @@
         }
         p{
             text-overflow: ellipsis;
+            width: 100%;
+            white-space: nowrap;
         }
         .fond{
             position: absolute;
@@ -333,6 +335,7 @@
         h2{
             font-size: 1.4em;
             text-overflow: ellipsis;
+            width: 100%;
         }
         .prix{
             position: absolute;
@@ -352,6 +355,7 @@
         }
         p{
             text-overflow: ellipsis;
+            width: 100%;
         }
         .fond{
             position: absolute;
