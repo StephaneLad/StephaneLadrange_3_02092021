@@ -18,10 +18,9 @@
     }
 }
 #logo-menu{
-    width: 20%;
-    height: 100%;
+    text-align: center;
+    font-size: 2.5em;
     margin: auto;
-    object-fit:unset;
 }
 @media screen and (max-width: 768px){
     .header-menu{
@@ -43,12 +42,6 @@
             object-fit: cover;
         }
     }
-    #logo-menu{
-        width: 50%;
-        height: 80%;
-        margin: auto;
-        object-fit:unset;
-    }
 }
 @media screen and (max-width: 375px){
     .header-menu{
@@ -69,11 +62,5 @@
             height: 100%;
             object-fit: cover;
         }
-    }
-    #logo-menu{
-        width: 50%;
-        height: 50%;
-        margin: auto;
-        object-fit:unset;
     }
 }

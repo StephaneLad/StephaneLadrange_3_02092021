@@ -58,8 +58,8 @@
             @include heart-btn;
             background-color: $background;
             position: absolute;
-            right: 40%;
-            bottom: 2%;
+            right: 20%;
+            bottom: 5%;
             font-size: 1.4em;
         }
     }
@@ -191,8 +191,8 @@
             @include heart-btn;
             background-color: $background;
             position: absolute;
-            right: 30%;
-            bottom: 3%;
+            right: 10%;
+            bottom: 5%;
             font-size: 1.4em;
         }
     }
@@ -316,7 +316,7 @@
             background-color: $background;
             position: absolute;
             right: 5%;
-            bottom: 2%;
+            bottom: 5%;
             font-size: 1.4em;
             z-index: 2;
         }

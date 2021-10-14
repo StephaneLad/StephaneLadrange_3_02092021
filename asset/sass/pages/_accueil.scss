@@ -25,6 +25,7 @@
 }
 a,a:visited{
     text-decoration: none;
+    color: inherit;
 }
 // description
 .description-restaurant{
@@ -67,7 +68,9 @@ a,a:visited{
     }
 }
 nav{
-
+    h2{
+        margin: 0.7em;
+    }
     ul{
         display: flex;
         justify-content: space-around;
@@ -87,7 +90,7 @@ nav{
     i{
         font-size: 2em;
         margin: 0 1em;
-        color: gray;
+        color: $primary-color;
     }
     span{
         border: 1px solid $primary-color;
@@ -169,7 +172,8 @@ nav{
     top: 10px;
     right: 10px;
     background-color: $tertiary-color;
-    padding: 2px;
+    padding: 4px;
+    color: darken($color: $tertiary-color, $amount: 60%);
 }
 
 @media screen and (max-width: 768px){
@@ -251,10 +255,11 @@ nav{
         height: 5em;
         width: 30%;
         padding: 0.5em;
+        text-align: center;
         i{
             font-size: 2em;
             margin: 0 1em;
-            color: gray;
+            color:$primary-color;
         }
         span{
             border: 1px solid $primary-color;
@@ -311,7 +316,6 @@ nav{
         top: 10px;
         right: 10px;
         background-color: $tertiary-color;
-        padding: 2px;
     }
 }
 @media screen and (max-width: 375px) {
@@ -401,7 +405,7 @@ nav{
         i{
             font-size: 2em;
             margin: 0 1em;
-            color: gray;
+            color: $primary-color;
         }
         span{
             border: 1px solid $primary-color;
@@ -454,6 +458,5 @@ nav{
         top: 10px;
         right: 10px;
         background-color: $tertiary-color;
-        padding: 2px;
     }
 }
