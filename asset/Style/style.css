@@ -146,12 +146,21 @@ h1 {
     transform: translate(-50px, 0);
   }
 }
+@keyframes paragraphe {
+  0% {
+    width: 100%;
+  }
+  20% {
+    width: 85%;
+  }
+  100% {
+    width: 76%;
+  }
+}
 .header-menu {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 4em;
-}
-.header-menu div {
   display: flex;
 }
 .header-menu i {
@@ -177,8 +186,6 @@ h1 {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 4em;
-  }
-  .header-menu div {
     display: flex;
   }
   .header-menu i {
@@ -198,8 +205,6 @@ h1 {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 5em;
-  }
-  .header-menu div {
     display: flex;
   }
   .header-menu i {
@@ -236,7 +241,6 @@ footer {
   color: white;
   padding: 1em;
   width: 100%;
-  bottom: 0;
 }
 footer h3 {
   margin-bottom: 1em;
@@ -248,21 +252,12 @@ footer a {
   color: white;
 }
 
-.footer-note {
-  bottom: auto;
-}
-
-.menu_footer {
-  position: absolute;
-}
-
 @media screen and (max-width: 768px) {
   footer {
     background-color: #353535;
     color: white;
     padding: 1em;
     width: 100%;
-    bottom: 0;
   }
   footer h3 {
     margin-bottom: 1em;
@@ -272,10 +267,6 @@ footer a {
   }
   footer a {
     color: white;
-  }
-
-  .footer-note {
-    bottom: 0;
   }
 }
 @media screen and (max-width: 375px) {
@@ -293,19 +284,16 @@ footer a {
   footer a {
     color: white;
   }
-
-  .menu_footer {
-    bottom: auto;
-  }
 }
 @media screen and (min-width: 769px) {
   .main-menu {
     display: grid;
     grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 17em 4em 16em;
+    grid-template-rows: 17em 4em 50%;
     grid-template-areas: "titre titre titre" "z command y" "entre plat dessert";
     grid-gap: 1em;
     margin: 0.5em 2em;
+    min-height: 46em;
   }
   .main-menu .btn {
     background: #FF79DA;
@@ -422,14 +410,15 @@ footer a {
   .menu a:hover .prix {
     animation: prix 1s ease-in-out forwards;
   }
-  .menu div {
+  .menu a {
     background-color: white;
     border-radius: 15px;
     height: auto;
     padding: 0.5em;
     position: relative;
-    margin: 0.5em;
+    margin: 1.2em 0.5em;
     overflow: hidden;
+    display: block;
   }
 
   .entre {
@@ -447,161 +436,7 @@ footer a {
     animation: progressive-opacity 2.5s ease-in-out 0.5s forwards;
   }
 }
-@media screen and (min-width: 376px) and (max-width: 768px) {
-  .main-menu {
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: 12em 5em 17em;
-    grid-template-areas: "titre titre titre" "z command y" "entre plat dessert";
-    grid-gap: 0.5em;
-    margin: 0.5em;
-  }
-  .main-menu :nth-child(1) {
-    grid-area: titre;
-  }
-  .main-menu :nth-child(2) {
-    grid-area: entre;
-  }
-  .main-menu :nth-child(3) {
-    grid-area: plat;
-  }
-  .main-menu :nth-child(4) {
-    grid-area: dessert;
-  }
-  .main-menu :nth-child(5) {
-    grid-area: command;
-  }
-  .main-menu .btn {
-    background: #FF79DA;
-    background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-    border-radius: 40px;
-    border: 0px;
-    box-shadow: 4px 4px 10px #9356DC;
-    cursor: pointer;
-    height: 3em;
-    width: 100%;
-    margin: auto;
-  }
-  .main-menu .btn:hover {
-    filter: brightness(120%);
-    box-shadow: 8px 6px 20px #9356DC;
-  }
-
-  .menu-note {
-    grid-template-rows: 12em 5em 21em;
-  }
-
-  .restaurant-menu {
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  .restaurant-menu img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-  }
-  .restaurant-menu h1 {
-    position: absolute;
-    background-color: white;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 0.1em 0;
-    background-color: #f6f6f6;
-    border-radius: 0 0 20px 20px;
-  }
-  .restaurant-menu .heart-btn {
-    cursor: pointer;
-    border: 0px;
-    background-color: white;
-    background-color: #f6f6f6;
-    position: absolute;
-    right: 10%;
-    bottom: 5%;
-    font-size: 1.4em;
-  }
-  .restaurant-menu .heart-btn span {
-    opacity: 0%;
-    color: #FF79DA;
-    position: absolute;
-    left: 0;
-  }
-  .restaurant-menu .heart-btn:hover span {
-    animation: progressive-opacity 1s ease-in-out forwards;
-  }
-
-  .menu {
-    background-color: #f6f6f6;
-    padding: 0.5em;
-    border-radius: 15px;
-  }
-  .menu h2 {
-    font-size: 1.1em;
-  }
-  .menu h3 {
-    color: gray;
-    width: 10%;
-    border-bottom: 0.2em solid #99E2D0;
-    margin: 0.2em 0;
-  }
-  .menu div {
-    background-color: white;
-    border-radius: 15px;
-    height: auto;
-    padding: 0.5em;
-    position: relative;
-    margin: 0.2em 0;
-    overflow: hidden;
-  }
-  .menu .prix {
-    position: absolute;
-    right: 10px;
-    top: 0;
-    height: 100%;
-    padding: 1.2em 0;
-  }
-  .menu p {
-    text-overflow: ellipsis;
-    width: 100%;
-    white-space: nowrap;
-  }
-  .menu .fond {
-    position: absolute;
-    opacity: 0%;
-    top: 0;
-    right: 0px;
-    padding: 1.2em 1em;
-    background-color: #99E2D0;
-    height: 100%;
-  }
-  .menu i {
-    color: white;
-    font-size: 1.5em;
-  }
-  .menu a:hover .fond {
-    animation: validé_fond 2s ease-in-out forwards;
-  }
-  .menu a:hover i {
-    animation: validé 2s ease-in-out forwards;
-  }
-  .menu a:hover .prix {
-    animation: prix 2s ease-in-out forwards;
-  }
-
-  .entre {
-    animation: progressive-opacity 1.5s ease-in-out 0.5s;
-  }
-
-  .plat {
-    animation: progressive-opacity 2s ease-in-out 0.5s;
-  }
-
-  .dessert {
-    animation: progressive-opacity 2.5s ease-in-out 0.5s;
-  }
-}
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
   .main-menu {
     display: grid;
     grid-template-columns: 100%;
@@ -680,7 +515,9 @@ footer a {
     font-size: 1em;
   }
   .menu h2 {
-    font-size: 1.4em;
+    font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
   }
@@ -691,7 +528,7 @@ footer a {
     height: 100%;
     padding: 1.2em 0;
   }
-  .menu div {
+  .menu a {
     background-color: white;
     border-radius: 15px;
     height: 80%;
@@ -699,8 +536,11 @@ footer a {
     position: relative;
     margin: 1em 0;
     overflow: hidden;
+    display: block;
   }
   .menu p {
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
     width: 100%;
   }
@@ -725,6 +565,9 @@ footer a {
   }
   .menu a:hover .prix {
     animation: prix 2s ease-in-out forwards;
+  }
+  .menu a:hover .detail-contenu {
+    animation: paragraphe 2s ease-in-out forwards;
   }
 
   .entre {
@@ -887,7 +730,6 @@ nav ul {
   height: 100%;
   object-fit: cover;
   border-radius: 25px 25px 26px 26px;
-  box-shadow: 1px 1px 10px black;
 }
 
 #note-enchante {
@@ -898,6 +740,8 @@ nav ul {
 
 .restaurant {
   position: relative;
+  border-radius: 25px 25px 26px 26px;
+  box-shadow: 1px 1px 10px black;
 }
 
 .detail {
@@ -909,7 +753,7 @@ nav ul {
   border-radius: 0 0 25px 25px;
   padding: 0.2em 1em;
 }
-.detail button {
+.detail .heart-btn {
   cursor: pointer;
   border: 0px;
   background-color: white;
@@ -919,13 +763,13 @@ nav ul {
   right: 3%;
   font-size: 1.4em;
 }
-.detail button span {
+.detail .heart-btn span {
   opacity: 0%;
   color: #FF79DA;
   position: absolute;
   left: 0;
 }
-.detail button:hover span {
+.detail .heart-btn:hover span {
   animation: progressive-opacity 1s ease-in-out forwards;
 }
 

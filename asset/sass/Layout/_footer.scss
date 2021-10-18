@@ -3,7 +3,6 @@ footer{
     color: white;
     padding: 1em;
     width: 100%;
-    bottom: 0;
     h3{
         margin-bottom: 1em;
     }
@@ -15,19 +14,12 @@ footer{
     }
     
 }
-.footer-note{
-    bottom: auto;
-}
-.menu_footer{
-    position: absolute;
-}
 @media screen and (max-width: 768px){
     footer{
         background-color: #353535;
         color: white;
         padding: 1em;
         width: 100%;
-        bottom: 0;
         h3{
             margin-bottom: 1em;
         }
@@ -37,9 +29,6 @@ footer{
         a{
             color: white;
         }
-    }
-    .footer-note{
-        bottom: 0;
     }
 }
 @media screen and (max-width: 375px){
@@ -56,8 +45,5 @@ footer{
         a{
             color: white;
         }
-    }
-    .menu_footer{
-        bottom: auto;
     }
 }
