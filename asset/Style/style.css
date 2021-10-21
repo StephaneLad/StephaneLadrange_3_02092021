@@ -196,9 +196,10 @@ footer a {
 
 .titre-footer {
   font-size: 1.5em;
+  font-weight: normal;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1101px) {
   .main-menu {
     display: grid;
     grid-template-columns: repeat(3, 33%);
@@ -240,7 +241,8 @@ footer a {
   }
 
   .menu-note {
-    grid-template-rows: 17em 4em 20em;
+    grid-template-rows: 17em 4em 30em;
+    min-height: 54em;
   }
 
   .restaurant-menu {
@@ -296,10 +298,14 @@ footer a {
   .menu .prix {
     position: absolute;
     right: 10px;
-    top: 26px;
+    top: 38px;
+  }
+  .menu h2 {
+    width: 80%;
   }
   .menu p {
     overflow: hidden;
+    width: 80%;
   }
   .menu .fond {
     position: absolute;
@@ -349,7 +355,7 @@ footer a {
     animation: progressive-opacity 2.5s ease-in-out 0.5s forwards;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .main-menu {
     display: grid;
     grid-template-columns: 100%;
@@ -384,6 +390,7 @@ footer a {
   }
   .restaurant-menu img {
     width: 100%;
+    object-fit: cover;
   }
   .restaurant-menu h1 {
     position: absolute;
@@ -428,7 +435,7 @@ footer a {
     font-size: 1em;
   }
   .menu h2 {
-    font-size: 1em;
+    font-size: 1.2em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -436,7 +443,7 @@ footer a {
   .menu .prix {
     position: absolute;
     right: 10px;
-    top: 0;
+    top: 20px;
     height: 100%;
     padding: 1.2em 0;
   }
@@ -454,6 +461,7 @@ footer a {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-size: 1.2em;
   }
   .menu .fond {
     position: absolute;
@@ -472,16 +480,16 @@ footer a {
     width: 85%;
   }
   .menu a:hover .fond {
-    animation: validé_fond 2s ease-in-out forwards;
+    animation: validé_fond 1s ease-in-out forwards;
   }
   .menu a:hover i {
-    animation: validé 2s ease-in-out forwards;
+    animation: validé 1s ease-in-out forwards;
   }
   .menu a:hover .prix {
-    animation: prix 2s ease-in-out forwards;
+    animation: prix 1s ease-in-out forwards;
   }
   .menu a:hover .detail-contenu {
-    animation: paragraphe 2s ease-in-out forwards;
+    animation: paragraphe 1s ease-in-out forwards;
   }
 
   .entre {
@@ -494,6 +502,14 @@ footer a {
 
   .dessert {
     animation: progressive-opacity 2.5s ease-in-out 0.5s;
+  }
+}
+@media screen and (max-width: 425px) {
+  .menu h2 {
+    font-size: 1em;
+  }
+  .menu p {
+    font-size: 1em;
   }
 }
 #body {
