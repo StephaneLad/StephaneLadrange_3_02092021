@@ -16,6 +16,8 @@
         color: $primary-color;
         animation: chargement-grand 3.5s ease-in-out forwards;
         font-size: 20em;
+        position: absolute;
+        top: 15%;
     }
     p{
         margin: 1em 2em;
@@ -200,6 +202,8 @@ nav{
             margin: 1em 2em;
             font-size:30px;
             animation: chargement_text 3.5s ease-in-out forwards;
+            position: absolute;
+            top: 32%;
         }
     }
     // description
@@ -340,6 +344,8 @@ nav{
             margin: 1em 2em;
             font-size:30px;
             animation: chargement_text 3.5s ease-in-out forwards;
+            position: absolute;
+            top: 30%;
         }
     }
     // description

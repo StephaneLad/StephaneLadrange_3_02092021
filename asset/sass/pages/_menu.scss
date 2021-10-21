@@ -1,4 +1,4 @@
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1025px){
     .main-menu{
         display: grid;
         grid-template-columns: repeat(3,33%);
@@ -132,147 +132,7 @@
         animation: progressive-opacity 2.5s ease-in-out 0.5s forwards;
     }
 }
-// @media screen and (min-width: 376px) and (max-width: 768px){
-//     .main-menu{
-//         display: grid;
-//         grid-template-columns: repeat(3,33%);
-//         grid-template-rows: 12em 5em 17em ;
-//         grid-template-areas:
-//         "titre titre titre"
-//         "z command y"
-//         "entre plat dessert";
-//         grid-gap: 0.5em;
-//         margin: 0.5em;
-        
-//         :nth-child(1){
-//             grid-area: titre;
-//         }
-//         :nth-child(2){
-//             grid-area: entre;
-//         }
-//         :nth-child(3){
-//             grid-area: plat;
-//         }   
-//         :nth-child(4){
-//             grid-area: dessert;
-//         }
-//         :nth-child(5){
-//             grid-area: command;
-//         }
-//         .btn{
-//             @include button;
-//             height: 3em;
-//             width: 100%;
-//             margin: auto;
-//         }
-//     }
-//     .menu-note{
-//         grid-template-rows: 12em 5em 21em;
-//     }
-//     .restaurant-menu{
-//         display: flex;
-//         justify-content: center;
-//         position: relative;
-//         img{
-//             width: 100%;
-//             object-fit: cover;
-//             border-radius: 25px;
-            
-//         }
-//         h1{
-//             position: absolute;
-//             background-color: white;
-//             bottom: 0;
-//             width: 100%;
-//             text-align: center;
-//             padding: 0.1em 0;
-//             background-color: $background;
-//             border-radius: 0 0 20px 20px;
-//         }
-//         .heart-btn{
-//             @include heart-btn;
-//             background-color: $background;
-//             position: absolute;
-//             right: 10%;
-//             bottom: 5%;
-//             font-size: 1.4em;
-//         }
-//     }
-//     .menu{
-//         background-color: $background;
-//         padding: 0.5em;
-//         border-radius: 15px;
-//         h2{
-//             font-size: 1.1em;
-//         }
-//         h3{
-//             color: gray;
-//             width: 10%;
-//             border-bottom: 0.2em solid $tertiary-color;
-//             margin: 0.2em 0;
-//         }
-//         div{
-//             background-color: white;
-//             border-radius: 15px;
-//             height: auto;
-//             padding: 0.5em;
-//             position: relative;
-//             margin: 0.2em 0 ;
-//             overflow: hidden;
-//         }
-//         .prix{
-//             position: absolute;
-//             right: 10px;
-//             top: 0;
-//             height: 100%;
-//             padding: 1.2em 0;
-//         }
-//         p{
-//             text-overflow: ellipsis;
-//             width: 100%;
-//             white-space: nowrap;
-//         }
-//         .fond{
-//             position: absolute;
-//             opacity: 0%;
-//             top: 0;
-//             right: 0px;
-//             padding: 1.2em 1em;
-//             background-color: $tertiary-color;
-//             height: 100%;
-//         }
-//         i{
-//             color: white;
-//             font-size: 1.5em;
-//         }
-//         a{
-//             &:hover{
-//                 .fond{
-//                     animation: validé_fond 2s ease-in-out forwards;
-//                 }
-//                 i{
-//                     animation: validé 2s ease-in-out forwards;
-//                 }
-//                 .prix{
-//                     animation: prix 2s ease-in-out forwards;
-//                 }
-//             }
-//         }
-//     }
-//     .entre{
-//         animation: progressive-opacity 1.5s ease-in-out 0.5s;
-//     }
-//     .plat{
-//         animation: progressive-opacity 2s ease-in-out 0.5s;
-//     }
-//     .dessert{
-//         animation: progressive-opacity 2.5s ease-in-out 0.5s;
-//     }
-
-// }
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1024px){
 
     .main-menu{
         display: grid;
@@ -339,7 +199,6 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            width: 100%;
         }
         .prix{
             position: absolute;
@@ -362,7 +221,6 @@
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
-            width: 100%;
         }
         .fond{
             position: absolute;
@@ -376,6 +234,9 @@
         i{
             color: white;
             font-size: 1.5em;
+        }
+        .detail-contenu{
+            width: 85%;
         }
         a{
             &:hover{
