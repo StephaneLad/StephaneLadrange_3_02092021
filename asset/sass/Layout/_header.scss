@@ -1,0 +1,21 @@
+#logo-accueil{
+    text-align: center;
+    font-size: 2.5em;
+}
+.header-menu{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 4em;
+    display: flex;
+    i{
+        position: absolute;
+        left: 10px;
+        top: 30px;
+        font-size: larger;
+    }
+}
+#logo-menu{
+    text-align: center;
+    font-size: 2.5em;
+    margin: auto;
+}

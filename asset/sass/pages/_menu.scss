@@ -94,7 +94,16 @@
             color: white;
             font-size: 1.5em;
         }
+
         a{
+            background-color: white;
+            border-radius: 15px;
+            height: auto;
+            padding: 0.5em;
+            position: relative;
+            margin: 1.2em 0.5em;
+            overflow: hidden;
+            display: block;
             &:hover{
                 .fond{
                     animation: validé_fond 1s ease-in-out forwards;
@@ -106,16 +115,6 @@
                     animation: prix 1s ease-in-out forwards;
                 }
             }
-        }
-        a{
-            background-color: white;
-            border-radius: 15px;
-            height: auto;
-            padding: 0.5em;
-            position: relative;
-            margin: 1.2em 0.5em;
-            overflow: hidden;
-            display: block;
         }
     }
     
@@ -146,8 +145,6 @@
         "plat"
         "dessert"
         "command";
-        
-        
         .btn{
             @include button;
             height: 3em;
