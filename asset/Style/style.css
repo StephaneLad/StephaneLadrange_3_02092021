@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -243,11 +244,6 @@ footer a {
     grid-area: command;
   }
 
-  .menu-note {
-    grid-template-rows: 17em 4em 30em;
-    min-height: 54em;
-  }
-
   .restaurant-menu {
     display: flex;
     justify-content: center;
@@ -280,9 +276,12 @@ footer a {
   }
   .restaurant-menu .heart-btn span {
     opacity: 0%;
-    color: #FF79DA;
+    background: linear-gradient(180deg, #9356DC 0%, #FF79DA 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     position: absolute;
     left: 0;
+    font-size: 1.02em;
   }
   .restaurant-menu .heart-btn:hover span {
     animation: progressive-opacity 1s ease-in-out forwards;
@@ -305,9 +304,14 @@ footer a {
   }
   .menu h2 {
     width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .menu p {
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
     width: 80%;
   }
   .menu .fond {
@@ -419,9 +423,12 @@ footer a {
   }
   .restaurant-menu .heart-btn span {
     opacity: 0%;
-    color: #FF79DA;
+    background: linear-gradient(180deg, #9356DC 0%, #FF79DA 80%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     position: absolute;
     left: 0;
+    font-size: 1.02em;
   }
   .restaurant-menu .heart-btn:hover span {
     animation: progressive-opacity 1s ease-in-out forwards;
@@ -448,7 +455,7 @@ footer a {
   .menu .prix {
     position: absolute;
     right: 10px;
-    top: 20px;
+    top: 16px;
     height: 100%;
     padding: 1.2em 0;
   }
@@ -515,6 +522,9 @@ footer a {
   }
   .menu p {
     font-size: 1em;
+  }
+  .menu .prix {
+    top: 8px;
   }
 }
 #body {
@@ -636,8 +646,10 @@ nav ul {
   top: 1em;
   font-size: 1.5em;
   border-radius: 50%;
-  padding: 0.1em 0.2em 0.1em 0.2em;
+  padding: 0em 0em 0.5em 0.3em;
   color: white;
+  height: 1.3em;
+  width: 1.3em;
 }
 
 .main-accueil {
@@ -705,12 +717,18 @@ nav ul {
 }
 .detail .heart-btn span {
   opacity: 0%;
-  color: #FF79DA;
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 80%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   position: absolute;
   left: 0;
+  font-size: 1.02em;
 }
 .detail .heart-btn:hover span {
   animation: progressive-opacity 1s ease-in-out forwards;
+}
+.detail .heart-btn span {
+  font-size: 1.03em;
 }
 
 .new {
@@ -752,6 +770,11 @@ nav ul {
   .Fonctionnement {
     text-align: center;
   }
+  .Fonctionnement span {
+    padding: 0em 0em 0.3em;
+    font-size: 1.3em;
+    top: 1.1em;
+  }
 
   .main-accueil {
     grid-template-columns: 100%;
@@ -768,7 +791,7 @@ nav ul {
     border-radius: 25px 25px 0 0;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 526px) {
   .load p {
     top: 30%;
   }
@@ -798,7 +821,7 @@ nav ul {
     padding: 0;
   }
   .Fonctionnement span {
-    top: 1.5em;
+    top: 2em;
   }
 }
 

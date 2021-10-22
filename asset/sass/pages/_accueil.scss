@@ -103,8 +103,10 @@ nav{
         top: 1em;
         font-size: 1.5em;
         border-radius: 50%;
-        padding: 0.1em 0.2em 0.1em 0.2em;
+        padding: 0.0em 0.0em 0.5em 0.30em;
         color: white;
+        height: 1.3em;
+        width: 1.3em;
     }
 }
 // liste restaurant
@@ -169,6 +171,9 @@ nav{
         top: 20%;
         right: 3%;
         font-size: 1.4em;
+        span{
+            font-size: 1.03em;
+        }
     }
 }
 .new{
@@ -207,7 +212,12 @@ nav{
         }
     }
     .Fonctionnement{
-        text-align: center;        
+        text-align: center;  
+        span{
+            padding: 0em 0em 0.3em;
+            font-size: 1.3em;
+            top: 1.1em;
+        }     
     }
     // liste restaurant
     .main-accueil{
@@ -229,7 +239,7 @@ nav{
         border-radius: 25px 25px 0 0;
     }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 526px) {
     .load{
         p{
             top: 30%;
@@ -260,7 +270,7 @@ nav{
         width: auto;
         padding: 0;
         span{
-            top: 1.5em;
+            top: 2em;
         }
     }
 }

@@ -32,10 +32,6 @@
             grid-area: command;
         }
     }
-    .menu-note{
-        grid-template-rows: 17em 4em 30em ;
-        min-height: 54em;
-    }
     .restaurant-menu{
         display: flex;
         justify-content: center;
@@ -81,10 +77,16 @@
         }
         h2{
             width: 80%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         p{
+            white-space: nowrap;
             overflow: hidden;
+            text-overflow: ellipsis;
             width: 80%;
+
         }
         .fond{
             position: absolute;
@@ -207,7 +209,7 @@
         .prix{
             position: absolute;
             right: 10px;
-            top: 20px;
+            top: 16px;
             height: 100%;
             padding: 1.2em 0;
         }
@@ -278,6 +280,9 @@
         }
         p{
             font-size: 1em;
+        }
+        .prix{
+            top: 8px;
         }
     }
 }

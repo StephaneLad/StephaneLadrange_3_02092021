@@ -18,9 +18,12 @@
     background-color: white;
     span{
         opacity: 0%;
-        color: $secondary-color;
+        background: linear-gradient(180deg, $primary-color 0%, $secondary-color 80%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
         position: absolute;
         left: 0;
+        font-size: 1.02em;
     }
     &:hover{
         span{
