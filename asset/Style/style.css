@@ -7,7 +7,7 @@
   list-style-type: none;
 }
 
-p, h2, h3 {
+p, h2, h3, button, i, li {
   font-family: "Roboto", sans-serif;
 }
 
@@ -189,6 +189,7 @@ footer h3 {
 }
 footer li {
   margin: 0.5em 0;
+  font-weight: bold;
 }
 footer a {
   color: white;
@@ -216,6 +217,8 @@ footer a {
     border: 0px;
     box-shadow: 4px 4px 10px #9356DC;
     cursor: pointer;
+    color: white;
+    font-weight: bold;
     height: 3em;
     width: 50%;
     margin: auto;
@@ -371,6 +374,8 @@ footer a {
     border: 0px;
     box-shadow: 4px 4px 10px #9356DC;
     cursor: pointer;
+    color: white;
+    font-weight: bold;
     height: 3em;
     margin: 2em 7em;
   }
@@ -585,7 +590,9 @@ a, a:visited {
   border: 0px;
   box-shadow: 4px 4px 10px #9356DC;
   cursor: pointer;
-  height: 2em;
+  color: white;
+  font-weight: bold;
+  height: 3em;
   margin: auto;
   width: 20%;
   font-size: large;
@@ -614,6 +621,7 @@ nav ul {
   height: 5em;
   width: 30%;
   padding: 0.5em;
+  font-weight: bold;
 }
 .Fonctionnement i {
   font-size: 2em;
@@ -760,7 +768,7 @@ nav ul {
     border-radius: 25px 25px 0 0;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .load p {
     top: 30%;
   }

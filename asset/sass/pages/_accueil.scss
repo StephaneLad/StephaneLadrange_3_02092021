@@ -63,7 +63,7 @@ a,a:visited{
 
     .btn{
         @include button;
-        height: 2em;
+        height: 3em;
         margin:auto;
         width: 20%;
         font-size: large;
@@ -89,6 +89,7 @@ nav{
     height: 5em;
     width: 30%;
     padding: 0.5em;
+    font-weight: bold;
     i{
         font-size: 2em;
         margin: 0 1em;
@@ -228,7 +229,7 @@ nav{
         border-radius: 25px 25px 0 0;
     }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     .load{
         p{
             top: 30%;

@@ -5,6 +5,8 @@
     border: 0px;
     box-shadow: 4px 4px 10px $primary-color;    
     cursor: pointer;
+    color: white;
+    font-weight: bold;
     &:hover{
         filter: brightness(120%);
         box-shadow: 8px 6px 20px $primary-color;
